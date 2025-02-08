@@ -1,11 +1,12 @@
 import './globals.css';
+
 import { GeistMono } from 'geist/font/mono';
 import { Metadata, Viewport } from 'next';
 import { CartProvider } from '@/components/cart-context';
 
 export const metadata: Metadata = {
-  title: 'NEXYZY',
-  description: 'Inspired by yeezy.com, built with Next.js.',
+  title: 'OneStore',
+  description: 'Pay with OnePay',
 };
 
 export const viewport: Viewport = {

@@ -49,9 +49,9 @@ export function Cart({ isOpen, onClose }: { isOpen: boolean; onClose: any }) {
                         $
                         {item.id.startsWith('sk')
                           ? item.id.includes('gray')
-                            ? '40'
-                            : '20'
-                          : '20'}
+                            ? '1'
+                            : '1'
+                          : '1'}
                       </p>
                     </div>
                     <div className="space-y-1">
@@ -91,8 +91,9 @@ export function Cart({ isOpen, onClose }: { isOpen: boolean; onClose: any }) {
                   <p className="font-mono">${total}</p>
                 </div>
                 <button
+                  disabled={items.length === 0}
                   onClick={handleContinueClick}
-                  className="w-full flex items-center justify-between bg-black text-white p-4 font-mono"
+                  className="w-full flex items-center justify-between bg-black text-white p-4 font-mono disabled:opacity-50 transition-opacity"
                 >
                   CHECKOUT WITH ONEPAY
                   <ChevronRight className="h-4 w-4" />

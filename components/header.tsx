@@ -17,7 +17,7 @@ export function Header({ isBackVisible, onBack }: HeaderProps) {
   const totalQuantity = items.reduce((total, item) => total + item.quantity, 0);
 
   return (
-    <nav className="flex items-center justify-between py-0 px-5 fixed top-0 left-0 right-0 z-10 bg-white">
+    <nav className="flex items-center justify-between py-0 px-5 fixed top-0 left-0 right-0 z-10 backdrop-blur-md">
       <div className="flex items-center">
         <MainMenu isBackVisible={isBackVisible} onBack={onBack} />
       </div>

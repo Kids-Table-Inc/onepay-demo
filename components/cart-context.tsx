@@ -61,9 +61,9 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   const total = items.reduce((acc, item) => {
     const price = item.id.startsWith('sk')
       ? item.id.includes('gray')
-        ? 40
-        : 20
-      : 20;
+        ? 1
+        : 1
+      : 1;
     return acc + price * item.quantity;
   }, 0);
 
