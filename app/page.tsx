@@ -9,7 +9,7 @@ import { ProductImage } from '@/components/product-image';
 
 export default function Page() {
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
-  const [_, startTransition] = useTransition();
+  const [, startTransition] = useTransition();
 
   const handleProductClick = (product: Product) => {
     startTransition(() => {

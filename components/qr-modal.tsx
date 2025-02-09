@@ -10,7 +10,7 @@ import { useState, useEffect } from "react";
 import React from "react";
 import { useWaitForPayment } from "@/lib/onepay/useOnePay";
 import { usePaymentLink } from "@/lib/onepay/useOnePay";
-import { ONEPAY_RECIPIENT_ADDRESS, OnePayPayment } from "@/lib/onepay/utils";
+import { ONEPAY_RECIPIENT_ADDRESS } from "@/lib/onepay/utils";
 
 interface QRModalProps {
   isOpen: boolean;
