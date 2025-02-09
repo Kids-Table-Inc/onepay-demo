@@ -52,7 +52,6 @@ async function getPaymentStatus({ id }: { id: string }) {
   }
 
   const data = await response.json();
-  console.log("polled", data);
   return data as GetPaymentStatusResponse;
 }
 
@@ -94,8 +93,6 @@ export function useWaitForPayment({
     if (!paymentId) {
       return;
     }
-
-    console.log("polling", paymentId, status);
 
     // Don't poll if the payment is already successful or failed
     if (status === "success" || status === "failed") {

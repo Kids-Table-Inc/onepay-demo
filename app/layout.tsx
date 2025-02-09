@@ -3,10 +3,12 @@ import './globals.css';
 import { GeistMono } from 'geist/font/mono';
 import { Metadata, Viewport } from 'next';
 import { CartProvider } from '@/components/cart-context';
+import { Analytics } from '@vercel/analytics/react';
 
 export const metadata: Metadata = {
   title: 'OneStore',
   description: 'Pay with OnePay',
+  icons: "/favicon.ico",
 };
 
 export const viewport: Viewport = {
@@ -26,6 +28,7 @@ export default function RootLayout({
             {children}
           </div>
         </CartProvider>
+        <Analytics />
       </body>
     </html>
   );
